@@ -11,7 +11,7 @@ const movies = [
     title: "Sự im lặng của bầy cừu",
     genre: ["Hành động", "Kinh dị"],
     img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
-    desc: "Bộ phim nói về một đàn cừu sống trong ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+    desc: "Bộ phim nói về một đàn d sống trong ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
     video: "https://www.tiktok.com/@hem12352/video/7533268572827667719?is_from_webapp=1&sender_device=pc",
   },
   {
