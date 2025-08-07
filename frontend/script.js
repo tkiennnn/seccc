@@ -5,12 +5,134 @@ const movies = [
     genre: ["Hành động", "Kinh dị"],
     img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
     desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
-    video: "https://www.youtube.com/embed/npDrsVA-q9g?si=mQJO1eVpow_ElkpE"
+    video: "https://www.tiktok.com/@ng.th.mua3/video/7507651133507259655",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+    video: "https://www.tiktok.com/@hem12352/video/7533268572827667719?is_from_webapp=1&sender_device=pc",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+   
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+  },
+  {
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
   },
 
 ];
 // Giới hạn phim mỗi trang
-const pageSize = 20; 
+const pageSize = 12; 
 let currentPage = 1;
 let filteredMovies = movies;
 
