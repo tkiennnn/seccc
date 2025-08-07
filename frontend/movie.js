@@ -16,6 +16,7 @@ window.onload = function() {
   const videoContainer = document.getElementById('video-container');
   const videoFrame = document.getElementById('video-frame');
   showBtn.onclick = function() {
+    const videoUrl = movie.video.include("rel=0") ? movie.video : movie.video + "&rel=0";
     videoFrame.src = movie.video || "";
     videoContainer.style.display = "block";
     showBtn.style.display = "none";

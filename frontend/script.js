@@ -1,23 +1,16 @@
 // Dữ liệu mẫu phim
 const movies = [
   {
-    title: "Phim 1",
-    genre: "Hành động",
-    img: "https://via.placeholder.com/200x300",
-    desc: "Đây là mô tả chi tiết phim 1.",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY"
+    title: "Sự im lặng của bầy cừu",
+    genre: ["Hành động", "Kinh dị"],
+    img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
+    video: "https://www.youtube.com/embed/npDrsVA-q9g?si=mQJO1eVpow_ElkpE&rel=0"
   },
-  {
-    title: "Phim 2",
-    genre: "Tình cảm",
-    img: "https://via.placeholder.com/200x300",
-    desc: "Đây là mô tả chi tiết phim 2.",
-    video: "https://www.youtube.com/embed/tgbNymZ7vqY"
-  },
-  // ... thêm các phim khác ...
-];
 
-const pageSize = 20; // Mỗi trang 20 phim
+];
+// Giới hạn phim mỗi trang
+const pageSize = 20; 
 let currentPage = 1;
 let filteredMovies = movies;
 
@@ -25,7 +18,7 @@ let filteredMovies = movies;
 function renderMovies() {
   const list = document.getElementById('movie-list');
   list.innerHTML = '';
-  // Đảm bảo grid 4 cột
+// Đảm bảo grid 4 cột
   list.style.display = 'grid';
   list.style.gridTemplateColumns = 'repeat(4, 1fr)';
   list.style.gap = '28px';
@@ -99,5 +92,5 @@ window.onload = function() {
   setTimeout(() => {
     renderMovies();
     showLoading(false);
-  }, 400); // giả lập loading
+  }, 400); 
 };
