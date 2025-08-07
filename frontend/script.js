@@ -1,68 +1,103 @@
+// Dữ liệu mẫu phim
 const movies = [
   {
-    title: "Sự im lặng của bầy cừu",
-    genre: ["Hành động", "Phiên lưu", "Tình cảm"],
-    poster: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
+    title: "Phim 1",
+    genre: "Hành động",
+    img: "https://via.placeholder.com/200x300",
+    desc: "Đây là mô tả chi tiết phim 1.",
+    video: "https://www.youtube.com/embed/tgbNymZ7vqY"
   },
   {
-    title: "Sói hoang",
-    genre: ["Hành động", "Kinh dị", "Viễn tưởng"],
-    poster: "https://earthhour.org.vn/wp-content/uploads/2024/11/Anh-soi-co-doc-meme-la-gi.jpg",
+    title: "Phim 2",
+    genre: "Tình cảm",
+    img: "https://via.placeholder.com/200x300",
+    desc: "Đây là mô tả chi tiết phim 2.",
+    video: "https://www.youtube.com/embed/tgbNymZ7vqY"
   },
-  {
-    title: "kamen rider decade",
-    genre: ["Hành động", "Viễn tưởng"],
-    poster: "https://www.nautiljon.com/images/drama/00/67/kamen_rider_decade_576.jpg?1512032877",
-  },
-  {
-    title: "kamen rider kabuto",
-    genre: ["Hành động", "Viễn tưởng"],
-    poster: "https://wallpaperaccess.com/full/5596742.jpg",
-  },
-  {
-    title: "oggy and the cockroaches",
-    genre: ["Hành động", "Tình cảm"],
-    poster: "https://xilam.com/wp-content/uploads/2017/11/Oggy_Catalogue_VA-1024x724.jpg",
-  },
-  {
-    title: "Thế giới động vật",
-    genre: ["Kinh dị", "Viễn tưởng"],
-    poster: "https://q.vgt.vn/2025/3/25/miss-grand-thai-lan-nhu-ganh-hai-thi-sinh-bat-chap-lac-vao-the-gioi-dong-vat-052-7406034.webp",
-  },
+  // ... thêm các phim khác ...
 ];
 
-const movieList = document.getElementById("movie-list");
+const pageSize = 20; // Mỗi trang 20 phim
+let currentPage = 1;
+let filteredMovies = movies;
 
-function displayMovies(data) {
-  movieList.innerHTML = data
-    .map(
-      (movie) => `
-      <div class="movie">
-        <img src="${movie.poster}" alt="${movie.title}" />
-        <div class="movie-title">${movie.title}</div>
-        <div class="movie-genre">${movie.genre.join(", ")}</div>
-      </div>
-    `
-    )
-    .join("");
+// Hiển thị danh sách phim
+function renderMovies() {
+  const list = document.getElementById('movie-list');
+  list.innerHTML = '';
+  // Đảm bảo grid 4 cột
+  list.style.display = 'grid';
+  list.style.gridTemplateColumns = 'repeat(4, 1fr)';
+  list.style.gap = '28px';
+
+  const start = (currentPage - 1) * pageSize;
+  const end = start + pageSize;
+  filteredMovies.slice(start, end).forEach(movie => {
+    const div = document.createElement('div');
+    div.className = 'movie';
+    div.innerHTML = `
+      <img src="${movie.img}" alt="${movie.title}" />
+      <div class="movie-title">${movie.title}</div>
+      <div class="movie-genre">${movie.genre}</div>
+    `;
+    // Chuyển hướng sang trang chi tiết phim
+    div.onclick = () => {
+      const movieIndex = movies.indexOf(movie);
+      // Lưu dữ liệu phim vào localStorage để movie.html lấy ra
+      localStorage.setItem('selectedMovie', JSON.stringify(movie));
+      window.location.href = `movie.html?id=${movieIndex}`;
+    };
+    list.appendChild(div);
+  });
+  document.getElementById('page-info').textContent = `${currentPage} / ${Math.max(1, Math.ceil(filteredMovies.length / pageSize))}`;
+  document.getElementById('prev-page').disabled = currentPage === 1;
+  document.getElementById('next-page').disabled = currentPage === Math.ceil(filteredMovies.length / pageSize);
 }
 
-displayMovies(movies);
+// Phân trang
+document.getElementById('prev-page').onclick = () => {
+  if (currentPage > 1) {
+    currentPage--;
+    renderMovies();
+  }
+};
+document.getElementById('next-page').onclick = () => {
+  if (currentPage < Math.ceil(filteredMovies.length / pageSize)) {
+    currentPage++;
+    renderMovies();
+  }
+};
 
-// Tìm kiếm phim theo từ khoá
-const searchInput = document.getElementById("search");
-const genreFilter = document.getElementById("genre-filter");
+// Loading indicator
+function showLoading(show) {
+  document.getElementById('loading').style.display = show ? 'flex' : 'none';
+}
+
+// Tìm kiếm và lọc thể loại
+document.getElementById('search').oninput = function() {
+  filterMovies();
+};
+document.getElementById('genre-filter').onchange = function() {
+  filterMovies();
+};
 
 function filterMovies() {
-  const keyword = searchInput.value.toLowerCase();
-  const genre = genreFilter.value;
-  const filtered = movies.filter((m) => {
-    const matchTitle = m.title.toLowerCase().includes(keyword);
-    const matchGenre = genre === "" || m.genre.includes(genre);
+  const searchValue = document.getElementById('search').value.toLowerCase();
+  const genreValue = document.getElementById('genre-filter').value;
+  filteredMovies = movies.filter(movie => {
+    const matchTitle = movie.title.toLowerCase().includes(searchValue);
+    const matchGenre = !genreValue || movie.genre === genreValue;
     return matchTitle && matchGenre;
   });
-  displayMovies(filtered);
+  currentPage = 1;
+  renderMovies();
 }
 
-searchInput.addEventListener("input", filterMovies);
-genreFilter.addEventListener("change", filterMovies);
+// Khởi tạo
+window.onload = function() {
+  showLoading(true);
+  setTimeout(() => {
+    renderMovies();
+    showLoading(false);
+  }, 400); // giả lập loading
+};
