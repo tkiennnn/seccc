@@ -5,7 +5,7 @@ const movies = [
     genre: ["Hành động", "Kinh dị"],
     img: "https://i.pinimg.com/736x/58/60/3d/58603dcfa57853b22b8b60b12d3b7dbc.jpg",
     desc: "Bộ phim nói về một đàn cừu sống trong một ngôi nhà rộng lớn cùng người chủ và chú chó chăn cừu",
-    video: "https://www.youtube.com/embed/npDrsVA-q9g?si=mQJO1eVpow_ElkpE&rel=0"
+    video: "https://www.youtube.com/embed/npDrsVA-q9g?si=mQJO1eVpow_ElkpE"
   },
 
 ];
