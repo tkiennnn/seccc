@@ -9,7 +9,16 @@ const movies = [
     genre: ["Hành động", "Kinh dị", "Viễn tưởng"],
     poster: "https://earthhour.org.vn/wp-content/uploads/2024/11/Anh-soi-co-doc-meme-la-gi.jpg",
   },
-  
+  {
+    title: "kamen rider decade",
+    genre: ["Hành động", "Viễn tưởng"],
+    poster: "https://www.nautiljon.com/images/drama/00/67/kamen_rider_decade_576.jpg?1512032877",
+  },
+  {
+    title: "kamen rider kabuto",
+    genre: ["Hành động", "Viễn tưởng"],
+    poster: "https://wallpaperaccess.com/full/5596742.jpg",
+  },
   {
     title: "oggy and the cockroaches",
     genre: ["Hành động", "Tình cảm"],
